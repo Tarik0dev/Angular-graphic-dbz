@@ -1,0 +1,6 @@
+.chart-wrapper {
+    position: relative;
+    height: 320px;
+    /* ou 40vh / ce que tu veux */
+    width: 100%;
+}
