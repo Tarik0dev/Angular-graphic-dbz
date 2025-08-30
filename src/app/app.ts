@@ -1,9 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MainChart } from "./main-chart/main-chart";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [MainChart],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
