@@ -1,11 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, type OnInit } from '@angular/core';
+import { DbzApiService } from '../services/dbz-api.service';
 
 @Component({
   selector: 'app-main-chart',
   imports: [],
   templateUrl: './main-chart.html',
-  styleUrl: './main-chart.css'
+  styleUrl: './main-chart.css',
+  providers: [DbzApiService]
 })
-export class MainChart {
+export class MainChart implements OnInit {
+  constructor(private readonly dbzApiService: DbzApiService) { }
 
+  ngOnInit(): void {
+    this.dbzApiService.getCharacter().subscribe((data) => {
+      console.log(data);
+    });
+  }
 }

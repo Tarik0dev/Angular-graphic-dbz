@@ -6,16 +6,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class DbzApi {
+export class DbzApiService {
 
 
-  private apiUrl = 'https://dragonball-api.com/api/characters?race=Saiyan'
+  private apiUrl = 'https://dragonball-api.com/api/characters?race=Saiyan';
 
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getCharacter(): Observable<Character> {
-    return this.http.get<Character>(this.apiUrl)
+    return this.http.get<any>(this.apiUrl);
   }
 
 }
