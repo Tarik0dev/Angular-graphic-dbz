@@ -14,8 +14,8 @@ export class DbzApiService {
 
   constructor(private http: HttpClient) { }
 
-  getCharacter(): Observable<Character> {
-    return this.http.get<any>(this.apiUrl);
+  getSaiyanCharacters(): Observable<Character[]> {
+    return this.http.get<Character[]>(this.apiUrl);
   }
 
 }

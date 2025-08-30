@@ -1,8 +1,4 @@
 export interface Character {
-
-
- name: string;
- ki: number;
-
-
+    name: string;
+    ki: number;
 }

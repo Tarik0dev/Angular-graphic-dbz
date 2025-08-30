@@ -12,8 +12,10 @@ export class MainChart implements OnInit {
   constructor(private readonly dbzApiService: DbzApiService) { }
 
   ngOnInit(): void {
-    this.dbzApiService.getCharacter().subscribe((data) => {
-      console.log(data);
+    this.dbzApiService.getSaiyanCharacters().subscribe((data) => {
+      data.forEach((character) => {
+        console.log("name: " + character.name + " // ki: " + character.ki);
+      });
     });
   }
 }
